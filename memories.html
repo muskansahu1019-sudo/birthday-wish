@@ -17,17 +17,12 @@ body{
   overflow:hidden;
 }
 
-/* container center */
 .container{
   display:flex;
   flex-direction:column;
   align-items:center;
 }
- <audio autoplay loop>
-  <source src="Tu Chahiye - Bajrangi Bhaijaan-Downringtone.com.mp3">
-</audio>
 
-/* IMAGE */
 img{
   width:60vw;
   max-width:500px;
@@ -38,7 +33,6 @@ img{
   transition:opacity 0.6s ease;
 }
 
-/* TEXT BELOW IMAGE */
 .text{
   margin-top:20px;
   font-size:24px;
@@ -46,7 +40,6 @@ img{
   transition:opacity 0.6s ease;
 }
 
-/* floating hearts */
 .heart{
   position:absolute;
   animation:float 6s linear infinite;
@@ -67,7 +60,26 @@ img{
   <div class="text" id="text">Best moments together 🥺💕</div>
 </div>
 
+<!-- ✅ AUDIO FIX -->
+<audio id="bgm" loop>
+  <source src="Tu Chahiye - Bajrangi Bhaijaan-Downringtone.com.mp3" type="audio/mpeg">
+</audio>
+
 <script>
+
+// ✅ autoplay attempt
+window.onload = function(){
+  let audio = document.getElementById("bgm");
+  audio.play().catch(()=>{});
+};
+
+// ✅ play after first click (mobile fix)
+document.addEventListener("click", function(){
+  let audio = document.getElementById("bgm");
+  audio.play();
+}, { once: true });
+
+// slideshow
 let images = [
   "trio1.jpeg",
   "duet5.jpeg",
@@ -115,6 +127,7 @@ setInterval(()=>{
   document.body.appendChild(h);
   setTimeout(()=>h.remove(),6000);
 },1000);
+
 </script>
 
 </body>
