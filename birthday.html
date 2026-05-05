@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Birthday 💖</title>
+
+<style>
+body{
+  margin:0;
+  background:black;
+  color:white;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  overflow:hidden;
+  font-family:'Segoe UI';
+}
+
+h1{
+  font-size:3em;
+  animation:fade 2s;
+}
+
+@keyframes fade{
+  from{opacity:0; transform:translateY(30px);}
+  to{opacity:1;}
+}
+
+button{
+  margin-top:20px;
+  padding:12px 25px;
+  border:none;
+  border-radius:25px;
+  background:#ff6fa5;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<div>
+  <h1>🎉 Happiest Birthday Meghnaa Jii 💖</h1>
+  <div style="font-size:100px;">🎂</div>
+  <button onclick="nextPage()">Continue 🎁</button>
+</div>
+
+<script>
+function nextPage(){
+  window.location.href="main.html";
+}
+
+// fireworks
+setInterval(()=>{
+  let f=document.createElement("div");
+  f.style.position="absolute";
+  f.style.width="6px";
+  f.style.height="6px";
+  f.style.background="white";
+  f.style.borderRadius="50%";
+  f.style.left=Math.random()*100+"vw";
+  f.style.top=Math.random()*100+"vh";
+  f.style.boxShadow="0 0 20px pink,0 0 40px white";
+  document.body.appendChild(f);
+  setTimeout(()=>f.remove(),800);
+},200);
+</script>
+
+</body>
+</html>

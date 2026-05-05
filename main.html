@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Main 💖</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(135deg,#d8b4f8,#a0e7e5,#ffc0cb);
+  font-family:'Segoe UI';
+}
+
+.container{
+  display:flex;
+  gap:80px;
+  align-items:center;
+}
+
+.cake{
+  font-size:140px;
+  animation:pop 2s infinite;
+}
+
+@keyframes pop{
+  0%{transform:scale(0.8);}
+  50%{transform:scale(1.2);}
+  100%{transform:scale(1);}
+}
+
+.box{
+  font-size:28px;
+  padding:40px;
+  background:white;
+  border-radius:20px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="box" onclick="goMsg()">🎁 Message</div>
+  <div class="cake">🎂</div>
+  <div class="box" onclick="goMem()">🎈 Memories</div>
+</div>
+
+<script>
+function goMsg(){
+  window.location.href="message.html";
+}
+function goMem(){
+  window.location.href="memories.html";
+}
+</script>
+
+</body>
+</html>

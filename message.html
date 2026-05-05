@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Message 💖</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  background:linear-gradient(135deg,#6a11cb,#8e2de2);
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  font-family:'Segoe UI';
+}
+
+.container{
+  max-width:500px;
+}
+
+#msg{
+  font-size:22px;
+  line-height:1.6;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+  <div id="msg"></div>
+</div>
+
+<script>
+let lines=[
+"Happiest Birthday Meghii! 🎉🎂",
+"On this special day, I just want to say how grateful I am to have you in my life. You bring so much joy and love to everyone around you. 💖",
+"you are the my comfort zone, my happy place, and the one who makes my heart smile. I hope this year brings you as much happiness as you have given me. 🥰",
+"you deserve all the love and happiness in the world, not just today but every day. May your birthday be filled with laughter, love, and unforgettable moments. 🎁",
+"you are the person who makes my life brighter and my days better. I am so lucky to have you as my best friend. Happiest Birthday, Jhala saab! 💕"
+];
+
+let i=0;
+
+function show(){
+  if(i<lines.length){
+    document.getElementById("msg").innerHTML+=lines[i]+"<br><br>";
+    i++;
+    setTimeout(show,1500);
+  }
+}
+
+show();
+</script>
+
+</body>
+</html>
